@@ -1,0 +1,97 @@
+body {
+  background-color: gray;
+}
+
+ul {
+  margin: 0px;
+}
+
+#canvas-container {
+  margin: 0 auto; /* for centering, feel free to use flexbox or some other method*/
+  box-sizing: border-box;
+  padding: 0.5in; /* controls margins */
+  width: 8.5in;
+  height: 11in;
+  background-color: white;
+  box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+#name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+#contact-info {
+  margin: 5px 0px;
+  padding: 1px 0px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+#contact-info > span {
+  padding: 0 20px;
+}
+
+section {
+  margin: 10px 0;
+}
+
+#summary {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.sec-title {
+  font-size: 22px;
+  text-align: center;
+  border-top: 2px solid black;
+  margin-bottom: 3px;
+}
+
+.sec-first {
+  /* border-top: none; */
+}
+
+.sec-content-g, .sec-content {
+  margin-left: 20px;
+}
+
+.sec-content-g {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.sec-content-g > div {
+  /* border: 1px solid red; */
+}
+
+.content-left {
+  text-align: start;
+}
+.content-right {
+  text-align: end;
+}
+
+/* For printing to pdf */
+@media print {
+  html {
+    height: 11in;
+    width: 8.5in;
+    overflow: hidden;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .canvas-container {
+    width: 100%;
+    box-shadow: none;
+  }
+}
