@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Resume extends Component {
 
@@ -11,9 +12,10 @@ class Resume extends Component {
                 <div>
                     <p>I made my Resume using html and css! Download the pdf below or the source files to see how I did it!</p>
                     <ul>
-                        <li><a target="_blank" href="files/Resume.pdf" download>Download my Resume (it is still a work in progress)</a></li>
-                        <li><a target="_blank" href="files/resume.html" download>Download the html file for my Resume</a></li>
-                        <li><a target="_blank" href="files/resume.css" download>Download the css (style sheet) file for my Resume</a></li>
+                        {console.log(process.env.PUBLIC_URL)}
+                        <li><a target="_blank" href={process.env.PUBLIC_URL + '/files/Resume.pdf'} download>Download my Resume (it is still a work in progress)</a></li>
+                        <li><a target="_blank" href={process.env.PUBLIC_URL + '/files/resume.html'} download>Download the html file for my Resume</a></li>
+                        <li><a target="_blank" href={process.env.PUBLIC_URL + '/files/resume.css'} download>Download the css (style sheet) file for my Resume</a></li>
                     </ul>
                 </div>
             </div>
