@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #2f7a8d;
+    --secondary-color: #fff;
+    --link-color: #004b88;
+    --font-color1: #fff;
+    --font-color2: #111;
+}
+
+body {
+    background-color: rgba($color: #2f7a8d, $alpha: .30);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration-line: none;
+}
+
+#App {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+}
+
+/******************** Navbar ************************************************************/
+.navbar {
+    background-color: white;
+    // location and size
+    position: fixed;
+    width: 100%;
+    height: 6vh;
+    top: 0;
+    left: 0;
+    // formatting for children 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar__navlink {
+    color: var(--font-color2);
+    font-size: .9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar__navlink:hover, .navbar--currentpage {
+    // color: var(--font-color1);
+    color: var(--primary-color);
+}
+
+.navbar__icon {
+}
+
+.navbar__text {
+}
+/******************** Navbar ************************************************************/
+
+/******************** Footer ************************************************************/
+.footer {
+    display: none;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+/******************** Footer ************************************************************/
+
+/******************** Main ************************************************************/
+#main {
+    position: absolute;
+    color: var(--font-color2);
+    top: 6vh;
+    width: 100%;
+}
+/******************** Main ************************************************************/
+
+/******************** Formatting for all pages ************************************************************/
+#homepage, #projectspage, #resumepage, #gamespage, #securitypage {
+    text-align: center;
+    padding: 0px 5%;
+}
+
+.page-title {
+    margin-top: 3%;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3%;
+}
+/******************** Formatting for all pages ************************************************************/
+
+/******************** Homepage ************************************************************/
+.homepage {
+}
+/******************** Homepage ************************************************************/
+
+/******************** Changes for different screen sizes ************************************************************/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .navbar__navlink {
+        color: var(--font-color2);
+        font-size: 1rem;
+        display: block;
+    }
+
+    .navbar__navlink:hover, .navbar--currentpage {
+        font-size: 1.2rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #App {
+        font-size: 1.2rem;
+    }
+
+    .page-title {
+        font-size: 2.2rem;
+    }
+
+    /*** Navbar ***/
+    .navbar {
+        background-color: rgba($color: #2f7a8d, $alpha: .10);
+        // location and size
+        position: fixed;
+        width: 15%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        // formatting for children 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-top: 2%;
+    }
+
+    .navbar__navlink {
+        width: 100%;
+        text-align: center;
+        padding: 5px 0px;
+        font-size: 1.2rem;
+    }
+
+    .navbar__navlink:hover, .navbar--currentpage {
+        font-size: 1.4rem;
+    }
+    /*** Navbar ***/
+
+    /*** Main ***/
+    #main {
+        position: absolute;
+        top: 0%;
+        left: 15%;
+        width: 85%;
+    }
+    /*** Main ***/
+
+    /*** Formatting for all pages ***/
+    #homepage, #projectspage, #resumepage, #gamespage, #securitypage {
+        margin-top: 2%;
+        text-align: center;
+    }
+
+    .page-title {
+        margin-top: 0%;
+    }
+
+    /*** Formatting for all pages ***/
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /*** Navbar ***/
+    .navbar {
+        width: 13%;
+    }
+    /*** Navbar ***/
+
+    /*** Main ***/
+    #main {
+        left: 13%;
+        width: 87%;
+    }
+    /*** Main ***/
+
+    /*** Formatting for all pages ***/
+    #homepage, #projectspage, #resumepage, #gamespage, #securitypage {
+        text-align: center;
+        padding: 0 10%;
+    }
+    /*** Formatting for all pages ***/
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /*** Navbar ***/
+    .navbar {
+    }
+    /*** Navbar ***/
+
+    /*** Main ***/
+    #main {
+    }
+    /*** Main ***/
+
+    /*** Formatting for all pages ***/
+    #homepage, #projectspage, #resumepage, #gamespage, #securitypage {
+        text-align: center;
+        padding: 0 18%;
+    }
+    /*** Formatting for all pages ***/
+
+} 
