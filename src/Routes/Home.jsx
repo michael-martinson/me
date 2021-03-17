@@ -7,7 +7,7 @@ class Home extends Component {
        return (
             <div id="homepage">
                 <div  className="page-title">
-                    <span id="home-title" >Michael Martinson's Personal Webapp</span>
+                    <span id="home-title" >Michael Martinson's Personal Website</span>
                 </div>
                 <p id="home-intro-text">
                     Welcome! My name is Michael Martinson and this is my personal website. This is where you 
