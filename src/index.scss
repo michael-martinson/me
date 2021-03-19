@@ -17,6 +17,10 @@ a {
     text-decoration-line: none;
 }
 
+ul {
+    margin: 0px;
+}
+
 #App {
     width: 100%;
     height: 100%;
@@ -34,6 +38,7 @@ a {
     left: 0;
     // formatting for children 
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -82,7 +87,7 @@ a {
 /******************** Main ************************************************************/
 
 /******************** Formatting for all pages ************************************************************/
-#homepage, #projectspage, #resumepage, #gamespage, #securitypage {
+.page {
     text-align: center;
     padding: 0px 5%;
 }
@@ -99,6 +104,112 @@ a {
 .homepage {
 }
 /******************** Homepage ************************************************************/
+
+/******************** Resume ************************************************************/
+
+#resumeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.resumeContainer__section {
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    font-size: .9rem;
+}
+
+.resumeContainer__section > div {
+    margin: 3px 2%;
+}
+
+.resumeContainer__section > a {
+    align-self: center;
+}
+
+.resumeContainer__classes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+}
+
+.classes__content {
+    text-align: center;
+    font-size: .8rem;
+}
+
+
+.resumeContainer__title {
+    text-align: center;
+}
+
+/******************** dropdowns ************************************************************/
+
+.dropdown {
+    width: 100%;
+    margin: 2px;
+}
+
+.dropdown:hover {
+}
+
+.dropdown-large {
+    font-size: 1.4rem;
+}
+
+.dropdown-medium {
+    font-size: .9rem;
+}
+
+.dropdown-small {
+    font-size: .8rem;
+}
+
+.dropdown-height {
+    height: 65px;
+}
+
+.dropdown__title {
+    text-align: center;
+    background-color: rgba($color: white, $alpha: .50);
+    border: 2px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown__title:hover {
+    background-color: rgba($color: #2f7a8d, $alpha: .2);
+    cursor: pointer;
+}
+
+.dropdown__content {
+
+}
+
+/******************** dropdowns ************************************************************/
+
+#resumedownload {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+#resumedownload > p {
+    font-size: .9rem;
+    width: 100%;
+}
+
+#resumedownload > a {
+    font-size: .8rem;
+    width: 50%;
+    margin: 2px 0px;
+}
+
+/******************** Resume ************************************************************/
+
 
 /******************** Changes for different screen sizes ************************************************************/
 
@@ -117,6 +228,10 @@ a {
 
     .navbar__navlink:hover, .navbar--currentpage {
         font-size: 1.2rem;
+    }
+
+    .dropdown-height {
+        height: 50px;
     }
 }
 
@@ -163,13 +278,13 @@ a {
     #main {
         position: absolute;
         top: 0%;
-        left: 15%;
-        width: 85%;
+        left: 13%;
+        width: 87%;
     }
     /*** Main ***/
 
     /*** Formatting for all pages ***/
-    #homepage, #projectspage, #resumepage, #gamespage, #securitypage {
+    .page {
         margin-top: 2%;
         text-align: center;
     }
@@ -179,6 +294,55 @@ a {
     }
 
     /*** Formatting for all pages ***/
+
+    /******************** Resume ************************************************************/
+
+    #resumeContainer {
+        font-size: 1.2rem;
+    }
+
+    .resumeContainer__section {
+        font-size: 1rem;
+    }
+
+
+    /******************** dropdowns ************************************************************/
+
+    .dropdown {
+    }
+
+    .dropdown:hover {
+    }
+
+    .dropdown-large {
+        font-size: 1.6rem;
+    }
+
+    .dropdown-medium {
+        font-size: 1rem;
+    }
+
+    .dropdown__title {
+    }
+
+    .dropdown__content {
+
+    }
+
+    /******************** dropdowns ************************************************************/
+
+    #resumedownload {
+    }
+
+    #resumedownload > p {
+        font-size: 1.1rem;
+    }
+
+    #resumedownload > a {
+        font-size: 1rem;
+    }
+
+    /******************** Resume ************************************************************/
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -190,18 +354,19 @@ a {
     /*** Navbar ***/
 
     /*** Main ***/
-    #main {
-        left: 13%;
-        width: 87%;
-    }
     /*** Main ***/
 
     /*** Formatting for all pages ***/
-    #homepage, #projectspage, #resumepage, #gamespage, #securitypage {
+    .page {
         text-align: center;
         padding: 0 10%;
     }
     /*** Formatting for all pages ***/
+
+    .dropdown-height {
+        height: 40px;
+    }
+
 
 }
 
@@ -218,9 +383,9 @@ a {
     /*** Main ***/
 
     /*** Formatting for all pages ***/
-    #homepage, #projectspage, #resumepage, #gamespage, #securitypage {
+    .page {
         text-align: center;
-        padding: 0 18%;
+        padding: 0 20%;
     }
     /*** Formatting for all pages ***/
 

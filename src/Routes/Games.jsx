@@ -4,7 +4,7 @@ class Games extends Component {
 
     render() {
         return (
-            <div id="gamespage">
+            <div id="gamespage" className="page">
                 <div className="page-title">
                     <span >Games</span>
                 </div>

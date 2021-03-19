@@ -4,7 +4,7 @@ class Security extends Component {
 
     render() {
         return (
-            <div id="securitypage">
+            <div id="securitypage" className="page">
                 <div className="page-title">
                     <span >Security</span>
                 </div>
