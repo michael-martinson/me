@@ -16,11 +16,11 @@ class App extends Component {
         <section id="main" className="">
           <Switch>
             <Route exact path={["/", "/me", "/home"]} component={Home} />
-            <Route path="/resume" component={Resume} />
+            <Route exact path={["/me/resume", "/resume"]} component={Resume} />
             {/* <Route path="/projects" component={Projects} /> */}
-            <Route path="/tools" component={Tools} />
-            <Route path="/security" component={Security} />
-            <Route path="/games" component={Games} />
+            <Route path={["/me/tools", "/tools"]} component={Tools} />
+            <Route path={["/me/security", "/security"]} component={Security} />
+            <Route path={["/me/games", "/games"]} component={Games} />
           </Switch>
         </section>
         <Footer />
