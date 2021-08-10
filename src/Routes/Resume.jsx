@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from 'react';
 import { DropDown } from "../Utils/dropdown";
 import { Tools } from "./Tools";
 
