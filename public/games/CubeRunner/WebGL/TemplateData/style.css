@@ -26,9 +26,11 @@ body { padding: 0; margin: 0 }
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .backbutton:hover {
     border-color: white;
     color: white;
     background-color: black;
+    cursor: grabbing;
 }
